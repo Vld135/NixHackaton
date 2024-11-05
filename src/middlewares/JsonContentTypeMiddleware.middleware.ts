@@ -9,7 +9,7 @@ export class JsonContentTypeMiddleware implements NestMiddleware {
 
     res.send = (body: any) => {
       res.setHeader('Content-Type', 'application/json');
-      res.write(JSON.stringify(body));
+      res.write(body);
       res.end();
       return res;
     };
